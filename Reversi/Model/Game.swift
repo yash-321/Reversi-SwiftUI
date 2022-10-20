@@ -50,27 +50,18 @@ class Game: ObservableObject {
                 boardState.makeLegalMove(x: cell.row, y: cell.column)
                 
                 if boardState.gameOver() {
-                    let result = boardState.result()
-                    if result[.Black]! > result[.White]! {
-                        resultString = "\nBlack: " + String(result[.Black]!) + "\n\nWhite: " + String(result[.White]!)
-                        blackWins += 1
-                        gameWinner = "Black"
-                    } else if result[.Black]! < result[.White]! {
-                        resultString = "\nBlack: " + String(result[.Black]!) + "\n\nWhite: " + String(result[.White]!)
-                        whiteWins += 1
-                        gameWinner = "White"
-                    } else {
-                        resultString = "\nBlack: " + String(result[.Black]!) + "\n\nWhite: " + String(result[.White]!)
-                        gameWinner = "Draw"
-                    }
+                    result()
                     return
                 }
                 
-                var moves = boardState.getLegalMoves()
+                let moves = boardState.getLegalMoves()
                 if moves.isEmpty {
-                    skipGo = turn == .Black ? "black" : "white"
+                    skipGo = "white"
                     boardState.changePlayer()
-                    moves = boardState.getLegalMoves()
+                }
+                
+                DispatchQueue.main.asyncAfter(deadline: .now()+0.5) {
+                    self.aiTurn()
                 }
             }
         }
@@ -78,9 +69,55 @@ class Game: ObservableObject {
         self.objectWillChange.send()
     }
     
+    public func aiTurn() {
+        if turn == .White {
+            let move = MoveChooser.chooseMove(boardState: boardState, settings: settings)
+            if move != nil {
+                boardState.makeLegalMove(x: move!.x, y: move!.y)
+            }
+            
+            if boardState.gameOver() {
+                result()
+                return
+            }
+            
+            let moves = boardState.getLegalMoves()
+            if moves.isEmpty {
+                skipGo = "black"
+                boardState.changePlayer()
+            }
+        }
+        
+        self.objectWillChange.send()
+    }
+    
+    private func result() {
+        let result = boardState.result()
+        if result[.Black]! > result[.White]! {
+            resultString = "\nBlack: " + String(result[.Black]!) + "\n\nWhite: " + String(result[.White]!)
+            blackWins += 1
+            gameWinner = "Black"
+        } else if result[.Black]! < result[.White]! {
+            resultString = "\nBlack: " + String(result[.Black]!) + "\n\nWhite: " + String(result[.White]!)
+            whiteWins += 1
+            gameWinner = "White"
+        } else {
+            resultString = "\nBlack: " + String(result[.Black]!) + "\n\nWhite: " + String(result[.White]!)
+            gameWinner = "Draw"
+        }
+        self.objectWillChange.send()
+    }
+
+    
     public func resetBoard() {
         boardState = BoardState(settings: settings, turn: (!startedPrev)!)
         startedPrev = (!startedPrev)!
+        
+        if turn == .White {
+            DispatchQueue.main.asyncAfter(deadline: .now()+0.5) {
+                self.aiTurn()
+            }
+        }
         
         if settings.bMoveIndicator {
             let moves = boardState.getLegalMoves()
@@ -89,5 +126,4 @@ class Game: ObservableObject {
             }
         }
     }
-    
 }

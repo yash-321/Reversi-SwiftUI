@@ -31,7 +31,13 @@ struct BoardView: View {
                 .alert(item: $game.skipGo) { player in
                     Alert(title: Text("No legal moves"),
                           message: Text("There are no legal moves that \(player) can play"),
-                          dismissButton: .default(Text("Skip Go")))
+                          dismissButton: .default(Text("Skip Go")){
+                        if player == "black" {
+                            DispatchQueue.main.asyncAfter(deadline: .now()+0.5) {
+                                game.aiTurn()
+                            }
+                        }
+                    })
                 }
                 
                 Spacer()
