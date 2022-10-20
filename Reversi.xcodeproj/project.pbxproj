@@ -1,0 +1,391 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		863FE35E28FEE183004ADA97 /* MoveChooser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863FE35D28FEE183004ADA97 /* MoveChooser.swift */; };
+		863FE36228FEE605004ADA97 /* BoardState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863FE36128FEE605004ADA97 /* BoardState.swift */; };
+		869E356A28F851E600BFC6F7 /* Move.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869E356928F851E600BFC6F7 /* Move.swift */; };
+		869E356C28F85EF700BFC6F7 /* Cell+Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869E356B28F85EF700BFC6F7 /* Cell+Status.swift */; };
+		86A4CEF228F73E8800D9785B /* ReversiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A4CEF128F73E8800D9785B /* ReversiApp.swift */; };
+		86A4CEF628F73E8D00D9785B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86A4CEF528F73E8D00D9785B /* Assets.xcassets */; };
+		86A4CEF928F73E8D00D9785B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86A4CEF828F73E8D00D9785B /* Preview Assets.xcassets */; };
+		86A4CF0128F73F6600D9785B /* GameSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A4CF0028F73F6600D9785B /* GameSettings.swift */; };
+		86A4CF0328F7474E00D9785B /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A4CF0228F7474E00D9785B /* Game.swift */; };
+		86A4CF0528F7486300D9785B /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A4CF0428F7486300D9785B /* Cell.swift */; };
+		86A4CF0928F7546F00D9785B /* Piece.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A4CF0828F7546F00D9785B /* Piece.swift */; };
+		86A4CF0B28F7570100D9785B /* CellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A4CF0A28F7570100D9785B /* CellView.swift */; };
+		86A4CF0E28F7672900D9785B /* BoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A4CF0D28F7672900D9785B /* BoardView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		863FE35D28FEE183004ADA97 /* MoveChooser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveChooser.swift; sourceTree = "<group>"; };
+		863FE36128FEE605004ADA97 /* BoardState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardState.swift; sourceTree = "<group>"; };
+		869E356928F851E600BFC6F7 /* Move.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Move.swift; sourceTree = "<group>"; };
+		869E356B28F85EF700BFC6F7 /* Cell+Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Cell+Status.swift"; sourceTree = "<group>"; };
+		86A4CEEE28F73E8800D9785B /* Reversi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reversi.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		86A4CEF128F73E8800D9785B /* ReversiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReversiApp.swift; sourceTree = "<group>"; };
+		86A4CEF528F73E8D00D9785B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		86A4CEF828F73E8D00D9785B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		86A4CF0028F73F6600D9785B /* GameSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSettings.swift; sourceTree = "<group>"; };
+		86A4CF0228F7474E00D9785B /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		86A4CF0428F7486300D9785B /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
+		86A4CF0828F7546F00D9785B /* Piece.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Piece.swift; sourceTree = "<group>"; };
+		86A4CF0A28F7570100D9785B /* CellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellView.swift; sourceTree = "<group>"; };
+		86A4CF0D28F7672900D9785B /* BoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		86A4CEEB28F73E8800D9785B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		86A4CEE528F73E8800D9785B = {
+			isa = PBXGroup;
+			children = (
+				86A4CEF028F73E8800D9785B /* Reversi */,
+				86A4CEEF28F73E8800D9785B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		86A4CEEF28F73E8800D9785B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				86A4CEEE28F73E8800D9785B /* Reversi.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		86A4CEF028F73E8800D9785B /* Reversi */ = {
+			isa = PBXGroup;
+			children = (
+				86A4CEFF28F73F0D00D9785B /* Model */,
+				86A4CEF128F73E8800D9785B /* ReversiApp.swift */,
+				86A4CF0D28F7672900D9785B /* BoardView.swift */,
+				86A4CEF528F73E8D00D9785B /* Assets.xcassets */,
+				86A4CEF728F73E8D00D9785B /* Preview Content */,
+			);
+			name = Reversi;
+			path = "/Users/yashsangha/Documents/Code projects/Reversi/Reversi";
+			sourceTree = "<absolute>";
+		};
+		86A4CEF728F73E8D00D9785B /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				86A4CEF828F73E8D00D9785B /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		86A4CEFF28F73F0D00D9785B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				86A4CF0028F73F6600D9785B /* GameSettings.swift */,
+				86A4CF0228F7474E00D9785B /* Game.swift */,
+				86A4CF0428F7486300D9785B /* Cell.swift */,
+				86A4CF0828F7546F00D9785B /* Piece.swift */,
+				86A4CF0A28F7570100D9785B /* CellView.swift */,
+				869E356928F851E600BFC6F7 /* Move.swift */,
+				869E356B28F85EF700BFC6F7 /* Cell+Status.swift */,
+				863FE35D28FEE183004ADA97 /* MoveChooser.swift */,
+				863FE36128FEE605004ADA97 /* BoardState.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		86A4CEED28F73E8800D9785B /* Reversi */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 86A4CEFC28F73E8D00D9785B /* Build configuration list for PBXNativeTarget "Reversi" */;
+			buildPhases = (
+				86A4CEEA28F73E8800D9785B /* Sources */,
+				86A4CEEB28F73E8800D9785B /* Frameworks */,
+				86A4CEEC28F73E8800D9785B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Reversi;
+			productName = Reversi;
+			productReference = 86A4CEEE28F73E8800D9785B /* Reversi.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		86A4CEE628F73E8800D9785B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1400;
+				LastUpgradeCheck = 1400;
+				TargetAttributes = {
+					86A4CEED28F73E8800D9785B = {
+						CreatedOnToolsVersion = 14.0.1;
+					};
+				};
+			};
+			buildConfigurationList = 86A4CEE928F73E8800D9785B /* Build configuration list for PBXProject "Reversi" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 86A4CEE528F73E8800D9785B;
+			productRefGroup = 86A4CEEF28F73E8800D9785B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				86A4CEED28F73E8800D9785B /* Reversi */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		86A4CEEC28F73E8800D9785B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				86A4CEF928F73E8D00D9785B /* Preview Assets.xcassets in Resources */,
+				86A4CEF628F73E8D00D9785B /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		86A4CEEA28F73E8800D9785B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				869E356A28F851E600BFC6F7 /* Move.swift in Sources */,
+				86A4CF0928F7546F00D9785B /* Piece.swift in Sources */,
+				869E356C28F85EF700BFC6F7 /* Cell+Status.swift in Sources */,
+				86A4CEF228F73E8800D9785B /* ReversiApp.swift in Sources */,
+				863FE35E28FEE183004ADA97 /* MoveChooser.swift in Sources */,
+				86A4CF0B28F7570100D9785B /* CellView.swift in Sources */,
+				86A4CF0528F7486300D9785B /* Cell.swift in Sources */,
+				863FE36228FEE605004ADA97 /* BoardState.swift in Sources */,
+				86A4CF0E28F7672900D9785B /* BoardView.swift in Sources */,
+				86A4CF0128F73F6600D9785B /* GameSettings.swift in Sources */,
+				86A4CF0328F7474E00D9785B /* Game.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		86A4CEFA28F73E8D00D9785B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		86A4CEFB28F73E8D00D9785B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		86A4CEFD28F73E8D00D9785B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Reversi/Preview Content\"";
+				DEVELOPMENT_TEAM = C7WATD8UAV;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.board-games";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yashsangha.Reversi;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		86A4CEFE28F73E8D00D9785B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Reversi/Preview Content\"";
+				DEVELOPMENT_TEAM = C7WATD8UAV;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.board-games";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yashsangha.Reversi;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		86A4CEE928F73E8800D9785B /* Build configuration list for PBXProject "Reversi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				86A4CEFA28F73E8D00D9785B /* Debug */,
+				86A4CEFB28F73E8D00D9785B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		86A4CEFC28F73E8D00D9785B /* Build configuration list for PBXNativeTarget "Reversi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				86A4CEFD28F73E8D00D9785B /* Debug */,
+				86A4CEFE28F73E8D00D9785B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 86A4CEE628F73E8800D9785B /* Project object */;
+}
