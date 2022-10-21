@@ -63,11 +63,6 @@ class BoardState {
     public func setPiece(x: Int, y: Int, piece: Piece) {
         let cell = board[x][y]
         cell.piece = piece
-        cell.status = .Occupied
-    }
-    
-    public func setStatus(x: Int, y: Int, status: Cell.Status) {
-        board[x][y].status = status
     }
     
     public func getLegalMoves() -> [Move] {
@@ -159,14 +154,6 @@ class BoardState {
         
         changePlayer()               // Change player
         
-        // Change potential moves
-        for i in 0..<board.count {
-            for j in 0..<board[i].count {
-                if board[i][j].piece == nil {
-                    board[i][j].status = .Empty
-                }
-            }
-        }
     }
     
     public func checkLegalMove(x: Int, y: Int) -> Bool {
@@ -331,11 +318,6 @@ class BoardState {
         newBoard[half-1][half-1].piece = .Black
         newBoard[half-1][half].piece = .White
         newBoard[half][half-1].piece = .White
-        
-        newBoard[half][half].status = .Occupied
-        newBoard[half-1][half-1].status = .Occupied
-        newBoard[half-1][half].status = .Occupied
-        newBoard[half][half-1].status = .Occupied
 
         return newBoard
     }

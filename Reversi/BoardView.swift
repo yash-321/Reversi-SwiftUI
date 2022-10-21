@@ -55,6 +55,11 @@ struct BoardView: View {
                           message: Text(game.resultString),
                           dismissButton: .default(Text("Play Again")){
                         game.resetBoard()
+                        if winner == "Black" {
+                            game.blackWins += 1
+                        } else if winner == "White" {
+                            game.whiteWins += 1
+                        }
                     })
                 }
 

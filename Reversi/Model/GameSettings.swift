@@ -15,8 +15,6 @@ class GameSettings: ObservableObject {
     
     @Published var searchDepth = 6
     
-    @Published var bMoveIndicator = false
-    
     var squareSize: CGFloat {
         UIScreen.main.bounds.width*0.9 / CGFloat(columns)
     }

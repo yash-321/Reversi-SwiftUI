@@ -18,6 +18,7 @@ struct CellView: View {
             .frame(width: game.settings.squareSize,
                     height: game.settings.squareSize,
                     alignment: .center)
+            .border(.black, width: 1)
             .onTapGesture {
                 game.click(on: cell)
             }

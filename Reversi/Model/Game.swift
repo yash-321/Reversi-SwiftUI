@@ -30,14 +30,7 @@ class Game: ObservableObject {
     init(from settings: GameSettings) {
         self.settings = settings
         self.boardState = BoardState(settings: settings, turn: .Black) // construct our board
-        
-        if settings.bMoveIndicator {
-            let moves = boardState.getLegalMoves()
-            for move in moves {
-                boardState.setStatus(x: move.x, y: move.y, status: .Potential(turn))
-            }
         }
-    }
     
     var turnImage: Image {
         return turn == .Black ? Image("black circle") : Image("white circle")
@@ -95,11 +88,9 @@ class Game: ObservableObject {
         let result = boardState.result()
         if result[.Black]! > result[.White]! {
             resultString = "\nBlack: " + String(result[.Black]!) + "\n\nWhite: " + String(result[.White]!)
-            blackWins += 1
             gameWinner = "Black"
         } else if result[.Black]! < result[.White]! {
             resultString = "\nBlack: " + String(result[.Black]!) + "\n\nWhite: " + String(result[.White]!)
-            whiteWins += 1
             gameWinner = "White"
         } else {
             resultString = "\nBlack: " + String(result[.Black]!) + "\n\nWhite: " + String(result[.White]!)
@@ -116,13 +107,6 @@ class Game: ObservableObject {
         if turn == .White {
             DispatchQueue.main.asyncAfter(deadline: .now()+0.5) {
                 self.aiTurn()
-            }
-        }
-        
-        if settings.bMoveIndicator {
-            let moves = boardState.getLegalMoves()
-            for move in moves {
-                boardState.setStatus(x: move.x, y: move.y, status: .Potential(turn))
             }
         }
     }

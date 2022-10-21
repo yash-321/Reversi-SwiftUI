@@ -10,7 +10,6 @@
 		863FE35E28FEE183004ADA97 /* MoveChooser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863FE35D28FEE183004ADA97 /* MoveChooser.swift */; };
 		863FE36228FEE605004ADA97 /* BoardState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863FE36128FEE605004ADA97 /* BoardState.swift */; };
 		869E356A28F851E600BFC6F7 /* Move.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869E356928F851E600BFC6F7 /* Move.swift */; };
-		869E356C28F85EF700BFC6F7 /* Cell+Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869E356B28F85EF700BFC6F7 /* Cell+Status.swift */; };
 		86A4CEF228F73E8800D9785B /* ReversiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A4CEF128F73E8800D9785B /* ReversiApp.swift */; };
 		86A4CEF628F73E8D00D9785B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86A4CEF528F73E8D00D9785B /* Assets.xcassets */; };
 		86A4CEF928F73E8D00D9785B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86A4CEF828F73E8D00D9785B /* Preview Assets.xcassets */; };
@@ -26,7 +25,6 @@
 		863FE35D28FEE183004ADA97 /* MoveChooser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveChooser.swift; sourceTree = "<group>"; };
 		863FE36128FEE605004ADA97 /* BoardState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardState.swift; sourceTree = "<group>"; };
 		869E356928F851E600BFC6F7 /* Move.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Move.swift; sourceTree = "<group>"; };
-		869E356B28F85EF700BFC6F7 /* Cell+Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Cell+Status.swift"; sourceTree = "<group>"; };
 		86A4CEEE28F73E8800D9785B /* Reversi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reversi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		86A4CEF128F73E8800D9785B /* ReversiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReversiApp.swift; sourceTree = "<group>"; };
 		86A4CEF528F73E8D00D9785B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -96,7 +94,6 @@
 				86A4CF0828F7546F00D9785B /* Piece.swift */,
 				86A4CF0A28F7570100D9785B /* CellView.swift */,
 				869E356928F851E600BFC6F7 /* Move.swift */,
-				869E356B28F85EF700BFC6F7 /* Cell+Status.swift */,
 				863FE35D28FEE183004ADA97 /* MoveChooser.swift */,
 				863FE36128FEE605004ADA97 /* BoardState.swift */,
 			);
@@ -175,7 +172,6 @@
 			files = (
 				869E356A28F851E600BFC6F7 /* Move.swift in Sources */,
 				86A4CF0928F7546F00D9785B /* Piece.swift in Sources */,
-				869E356C28F85EF700BFC6F7 /* Cell+Status.swift in Sources */,
 				86A4CEF228F73E8800D9785B /* ReversiApp.swift in Sources */,
 				863FE35E28FEE183004ADA97 /* MoveChooser.swift in Sources */,
 				86A4CF0B28F7570100D9785B /* CellView.swift in Sources */,
