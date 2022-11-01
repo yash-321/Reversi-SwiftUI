@@ -13,7 +13,7 @@ class GameSettings: ObservableObject {
     @Published var rows = 8
     @Published var columns = 8
     
-    @Published var searchDepth = 64
+    @Published var searchDepth = 4
     
     var squareSize: CGFloat {
         UIScreen.main.bounds.width*0.9 / CGFloat(columns)

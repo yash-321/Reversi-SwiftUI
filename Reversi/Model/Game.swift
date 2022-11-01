@@ -38,7 +38,7 @@ class Game: ObservableObject {
     
     func click(on cell: Cell) {
         // Check we didn't click on a piece and its users turn
-        if cell.piece == nil {
+        if cell.piece == nil && turn == .Black {
             if boardState.checkLegalMove(x: cell.row, y: cell.column) {
                 boardState.makeLegalMove(x: cell.row, y: cell.column)
                 
@@ -53,7 +53,7 @@ class Game: ObservableObject {
                     boardState.changePlayer()
                 }
                 
-                DispatchQueue.main.asyncAfter(deadline: .now()+0.5) {
+                DispatchQueue.main.asyncAfter(deadline: .now()+0.2) {
                     self.aiTurn()
                 }
             }
