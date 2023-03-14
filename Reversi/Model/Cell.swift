@@ -31,4 +31,14 @@ class Cell: ObservableObject {
             return Image("")
         }
     }
+    
+    var value: Int {
+        if piece == .Black {
+            return -1
+        } else if piece == .White {
+            return 1
+        } else {
+            return 0
+        }
+    }
 }

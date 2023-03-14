@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		863FE35E28FEE183004ADA97 /* MoveChooser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863FE35D28FEE183004ADA97 /* MoveChooser.swift */; };
 		863FE36228FEE605004ADA97 /* BoardState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863FE36128FEE605004ADA97 /* BoardState.swift */; };
+		864730AD29C0131C00CE9CEA /* reversiAI.mlpackage in Sources */ = {isa = PBXBuildFile; fileRef = 864730AC29C0131B00CE9CEA /* reversiAI.mlpackage */; };
 		869E356A28F851E600BFC6F7 /* Move.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869E356928F851E600BFC6F7 /* Move.swift */; };
 		86A4CEF228F73E8800D9785B /* ReversiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A4CEF128F73E8800D9785B /* ReversiApp.swift */; };
 		86A4CEF628F73E8D00D9785B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86A4CEF528F73E8D00D9785B /* Assets.xcassets */; };
@@ -19,11 +20,15 @@
 		86A4CF0928F7546F00D9785B /* Piece.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A4CF0828F7546F00D9785B /* Piece.swift */; };
 		86A4CF0B28F7570100D9785B /* CellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A4CF0A28F7570100D9785B /* CellView.swift */; };
 		86A4CF0E28F7672900D9785B /* BoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A4CF0D28F7672900D9785B /* BoardView.swift */; };
+		86F7DC0F29A7DEEB001B764D /* MCTS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F7DC0E29A7DEEA001B764D /* MCTS.swift */; };
+		86F7DC1129A7E06C001B764D /* Minimax.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F7DC1029A7E06C001B764D /* Minimax.swift */; };
+		86F7DC1329A7E439001B764D /* AlphaZero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F7DC1229A7E439001B764D /* AlphaZero.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		863FE35D28FEE183004ADA97 /* MoveChooser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveChooser.swift; sourceTree = "<group>"; };
 		863FE36128FEE605004ADA97 /* BoardState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardState.swift; sourceTree = "<group>"; };
+		864730AC29C0131B00CE9CEA /* reversiAI.mlpackage */ = {isa = PBXFileReference; lastKnownFileType = folder.mlpackage; path = reversiAI.mlpackage; sourceTree = "<group>"; };
 		869E356928F851E600BFC6F7 /* Move.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Move.swift; sourceTree = "<group>"; };
 		86A4CEEE28F73E8800D9785B /* Reversi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reversi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		86A4CEF128F73E8800D9785B /* ReversiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReversiApp.swift; sourceTree = "<group>"; };
@@ -35,6 +40,9 @@
 		86A4CF0828F7546F00D9785B /* Piece.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Piece.swift; sourceTree = "<group>"; };
 		86A4CF0A28F7570100D9785B /* CellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellView.swift; sourceTree = "<group>"; };
 		86A4CF0D28F7672900D9785B /* BoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardView.swift; sourceTree = "<group>"; };
+		86F7DC0E29A7DEEA001B764D /* MCTS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCTS.swift; sourceTree = "<group>"; };
+		86F7DC1029A7E06C001B764D /* Minimax.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Minimax.swift; sourceTree = "<group>"; };
+		86F7DC1229A7E439001B764D /* AlphaZero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphaZero.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,7 +82,7 @@
 				86A4CEF728F73E8D00D9785B /* Preview Content */,
 			);
 			name = Reversi;
-			path = "/Users/yashsangha/Documents/Code projects/Reversi/Reversi";
+			path = /Users/yashsangha/Documents/ThirdYearProject/Reversi/Reversi;
 			sourceTree = "<absolute>";
 		};
 		86A4CEF728F73E8D00D9785B /* Preview Content */ = {
@@ -88,6 +96,7 @@
 		86A4CEFF28F73F0D00D9785B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				864730AC29C0131B00CE9CEA /* reversiAI.mlpackage */,
 				86A4CF0028F73F6600D9785B /* GameSettings.swift */,
 				86A4CF0228F7474E00D9785B /* Game.swift */,
 				86A4CF0428F7486300D9785B /* Cell.swift */,
@@ -96,6 +105,9 @@
 				869E356928F851E600BFC6F7 /* Move.swift */,
 				863FE35D28FEE183004ADA97 /* MoveChooser.swift */,
 				863FE36128FEE605004ADA97 /* BoardState.swift */,
+				86F7DC1029A7E06C001B764D /* Minimax.swift */,
+				86F7DC1229A7E439001B764D /* AlphaZero.swift */,
+				86F7DC0E29A7DEEA001B764D /* MCTS.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -171,6 +183,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				869E356A28F851E600BFC6F7 /* Move.swift in Sources */,
+				86F7DC0F29A7DEEB001B764D /* MCTS.swift in Sources */,
+				864730AD29C0131C00CE9CEA /* reversiAI.mlpackage in Sources */,
 				86A4CF0928F7546F00D9785B /* Piece.swift in Sources */,
 				86A4CEF228F73E8800D9785B /* ReversiApp.swift in Sources */,
 				863FE35E28FEE183004ADA97 /* MoveChooser.swift in Sources */,
@@ -180,6 +194,8 @@
 				86A4CF0E28F7672900D9785B /* BoardView.swift in Sources */,
 				86A4CF0128F73F6600D9785B /* GameSettings.swift in Sources */,
 				86A4CF0328F7474E00D9785B /* Game.swift in Sources */,
+				86F7DC1329A7E439001B764D /* AlphaZero.swift in Sources */,
+				86F7DC1129A7E06C001B764D /* Minimax.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

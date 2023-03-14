@@ -15,6 +15,8 @@ class Game: ObservableObject {
     /// The game board
     @Published var boardState: BoardState
     
+    private var agent = AlphaZero()
+    
     private var turn: Piece {
         return boardState.turn
     }
@@ -64,7 +66,7 @@ class Game: ObservableObject {
     
     public func aiTurn() {
         if turn == .White {
-            let move = MoveChooser.chooseMove(boardState: boardState, settings: settings)
+            let move = agent.chooseMove(boardState: boardState, settings: settings)
             if move != nil {
                 boardState.makeLegalMove(x: move!.x, y: move!.y)
             }

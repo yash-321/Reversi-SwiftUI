@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import CoreML
 
 class BoardState {
     private var settings: GameSettings
@@ -16,6 +17,21 @@ class BoardState {
         self.settings = settings
         self.board = Self.generateBoard(from: settings)
         self.turn = turn
+    }
+    
+    public func getMLArrayBoard() -> MLMultiArray {
+        guard let multiArray = try? MLMultiArray(
+            shape: [1, 1, 8, 8], dataType: .float32) else {
+            fatalError("Error initialising MLMultiArray")
+        }
+        
+        for i in 0..<settings.rows {
+            for j in 0..<settings.columns {
+                multiArray[[0,0,i,j] as [NSNumber]] = Float(board[i][j].value) as NSNumber
+            }
+        }
+        
+        return multiArray
     }
     
     public func changePlayer() {
