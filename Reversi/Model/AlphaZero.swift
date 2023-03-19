@@ -10,13 +10,13 @@ import CoreML
 
 
 class AlphaZero: MoveChooser{
-    var model: reversiAI?
+    private var model: AlphaZeroModel?
     
     init() {
         do {
-            self.model = try reversiAI(configuration: MLModelConfiguration())
+            self.model = try AlphaZeroModel(configuration: MLModelConfiguration())
         } catch {
-            print("Error loading model")
+            fatalError("Error loading model")
         }
     }
     
@@ -25,6 +25,27 @@ class AlphaZero: MoveChooser{
         if moves.isEmpty {
             return nil
         }
+        
+        let mcts = MCTS(settings: settings, nnet: self)
+        let canonicalBoard = boardState.deepCopy()
+        canonicalBoard.setCanonicalForm()
+        let maskedPolicy = mcts.getActionProb(canonicalBoard: canonicalBoard)
+
+//        let (policy, value) = predict(boardState: boardState)
+//
+//        let validMoves = movesToOneHot(moves: moves, settings: settings)
+//        let maskedPolicy = zip(policy, validMoves).map{ $0 * $1 }
+//
+        let maxIndex = maskedPolicy.firstIndex(of: maskedPolicy.max()!)
+        let bestMove = Move(x: Int(maxIndex!/settings.rows), y: maxIndex!%settings.rows)
+//       print(value)
+        print(bestMove)
+
+        return bestMove
+    }
+
+    
+    func predict(boardState: BoardState) -> ([Float32], Float32) {
         let state = boardState.getMLArrayBoard()
         guard let prediction = try? model!.prediction(x_1: state) else {
             fatalError("Prediction failed.")
@@ -33,37 +54,15 @@ class AlphaZero: MoveChooser{
         let policyOut = prediction.var_159
         let value = prediction.var_160
         
-        print(value)
-        
         let count = policyOut.count
         let pointer = UnsafeMutablePointer<Float32>(OpaquePointer(policyOut.dataPointer))
         let buffer = UnsafeBufferPointer(start: pointer, count: count)
         let policy = softmax(Array(buffer))
         
-        print(policy)
-        
-        
-        let validMoves = movesToOneHot(moves: moves, settings: settings)
-        
-        print(validMoves)
-        
-        let maskedPolicy = zip(policy, validMoves).map{ $0 * $1 }
-        
-        print(maskedPolicy)
-        
-        let maxIndex = policy.firstIndex(of: maskedPolicy.max()!)
-        
-        print(maxIndex!)
-        
-        let bestMove = Move(x: Int(maxIndex!/settings.rows), y: maxIndex!%settings.rows)
-        
-        print(bestMove)
-        
-        return bestMove
+        return (policy, Float32(value[0].floatValue))
     }
     
-    
-    private func movesToOneHot(moves: [Move], settings: GameSettings) -> [Float] {
+    public func movesToOneHot(moves: [Move], settings: GameSettings) -> [Float] {
         var oneHot = [Float](repeating: 0.0, count: 65)
 
         for move in moves {
@@ -73,7 +72,7 @@ class AlphaZero: MoveChooser{
         return oneHot
     }
     
-    func softmax(_ array: [Float32]) -> [Float32] {
+    private func softmax(_ array: [Float32]) -> [Float32] {
         let max = array.max() ?? 0
         let expArray = array.map { exp($0 - max) }
         let sum = expArray.reduce(0, +)

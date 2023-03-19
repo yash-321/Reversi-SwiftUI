@@ -29,6 +29,6 @@ struct CellView: View {
 struct CellView_Previews: PreviewProvider {
     static var previews: some View {
         CellView(cell: Cell(row: 0, column: 0, piece: .Black))
-            .environmentObject(Game(from: GameSettings()))
+            .environmentObject(Game(from: GameSettings(player2: .alphaZero)))
     }
 }

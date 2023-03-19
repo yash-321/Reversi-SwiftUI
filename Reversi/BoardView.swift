@@ -85,7 +85,7 @@ struct BoardView: View {
 }
 
 struct BoardView_Previews: PreviewProvider {
-    private static var gameSettings = GameSettings()
+    private static var gameSettings = GameSettings(player2: .alphaZero)
     static var previews: some View {
         BoardView()
             .environmentObject(Game(from: gameSettings))

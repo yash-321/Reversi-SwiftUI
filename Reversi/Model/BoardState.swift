@@ -34,6 +34,41 @@ class BoardState {
         return multiArray
     }
     
+    public func getGameEnded(player: Int) -> Int {
+        if !getLegalMoves().isEmpty {
+            return 0
+        }
+        changePlayer()
+        if !getLegalMoves().isEmpty {
+            return 0
+        }
+        changePlayer()
+        
+        if countDiff() > 0 {
+            return 1
+        }
+        return -1
+    }
+    
+    private func countDiff() -> Int {
+        return board.map{$0.map{$0.value}.reduce(0,+)}.reduce(0, +)
+    }
+    
+    public func stringRepresentation() -> String {
+        return board.map { $0.map { String($0.value) }.joined(separator: "") }.joined(separator: "")
+    }
+    
+    public func setCanonicalForm() {
+        if turn == .Black {
+            board = board.map { $0.map { Cell(row: $0.row, column: $0.column, piece: !$0.piece) } }
+            changePlayer()
+        }
+    }
+    
+    public func getIntBoard() -> [[Int]] {
+        return board.map { $0.map { $0.value } }
+    }
+    
     public func changePlayer() {
         turn = (!turn)!
     }

@@ -9,7 +9,7 @@ import SwiftUI
 
 @main
 struct ReversiApp: App {
-    var gameSettings = GameSettings()
+    var gameSettings = GameSettings(player2: .alphaZero)
     
     var body: some Scene {
         WindowGroup {
