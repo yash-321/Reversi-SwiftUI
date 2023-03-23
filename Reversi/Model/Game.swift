@@ -15,8 +15,6 @@ class Game: ObservableObject {
     /// The game board
     @Published var boardState: BoardState
     
-    private var agent = AlphaZero()
-    
     private var turn: Piece {
         return boardState.turn
     }
@@ -38,35 +36,58 @@ class Game: ObservableObject {
         return turn == .Black ? Image("black circle") : Image("white circle")
     }
     
-    func click(on cell: Cell) {
+    func click(on cell: Cell?) {
         // Check we didn't click on a piece and its users turn
-        if cell.piece == nil && turn == .Black {
-            if boardState.checkLegalMove(x: cell.row, y: cell.column) {
-                boardState.makeLegalMove(x: cell.row, y: cell.column)
-                
-                if boardState.gameOver() {
-                    result()
-                    return
-                }
-                
-                let moves = boardState.getLegalMoves()
-                if moves.isEmpty {
-                    skipGo = "white"
-                    boardState.changePlayer()
-                }
-                
-                DispatchQueue.main.asyncAfter(deadline: .now()+0.2) {
-                    self.aiTurn()
+        if cell != nil {
+            if cell!.piece == nil && turn == .Black && settings.player1 == nil {
+                if boardState.checkLegalMove(x: cell!.row, y: cell!.column) {
+                    boardState.makeLegalMove(x: cell!.row, y: cell!.column)
+                    
+                    if boardState.gameOver() {
+                        result()
+                        return
+                    }
+                    
+                    let moves = boardState.getLegalMoves()
+                    if moves.isEmpty {
+                        skipGo = "white"
+                        boardState.changePlayer()
+                    }
+                    
+                    DispatchQueue.main.asyncAfter(deadline: .now()+0.2) {
+                        self.aiTurn()
+                    }
                 }
             }
         }
 
         self.objectWillChange.send()
+        
+        if settings.player1 != nil {
+            aiTurn()
+        }
+
     }
     
     public func aiTurn() {
-        if turn == .White {
-            let move = agent.chooseMove(boardState: boardState, settings: settings)
+        if settings.player1 != nil && turn == .Black {
+            let move = settings.player1!.chooseMove(boardState: boardState, settings: settings)
+            if move != nil {
+                boardState.makeLegalMove(x: move!.x, y: move!.y)
+            }
+            
+            if boardState.gameOver() {
+                result()
+                return
+            }
+            
+            let moves = boardState.getLegalMoves()
+            if moves.isEmpty {
+                skipGo = "white"
+                boardState.changePlayer()
+            }
+        } else if turn == .White {
+            let move = settings.player2.chooseMove(boardState: boardState, settings: settings)
             if move != nil {
                 boardState.makeLegalMove(x: move!.x, y: move!.y)
             }
@@ -84,6 +105,7 @@ class Game: ObservableObject {
         }
         
         self.objectWillChange.send()
+
     }
     
     private func result() {

@@ -18,22 +18,33 @@ class GameSettings: ObservableObject {
     
     @Published var mctsSims = 25
     
-    @Published var agent: MoveChooser
+    @Published var player1: MoveChooser?
+    @Published var player2: MoveChooser
     
     var squareSize: CGFloat {
         UIScreen.main.bounds.width*0.9 / CGFloat(columns)
     }
     
     init(player1: PlayerType = .human, player2: PlayerType) {
-        switch(player2){
+        switch(player1){
         case .alphaZero:
-            self.agent = AlphaZero()
+            self.player1 = AlphaZero()
             
         case .minimax:
-            self.agent = Minimax()
+            self.player1 = Minimax()
             
         default:
-            self.agent = AlphaZero()
+            self.player1 = nil
+        }
+        switch(player2){
+        case .alphaZero:
+            self.player2 = AlphaZero()
+            
+        case .minimax:
+            self.player2 = Minimax()
+            
+        default:
+            self.player2 = AlphaZero()
         }
     }
 }

@@ -8,42 +8,40 @@
 import SwiftUI
 
 struct MenuView: View {
+    @State private var agent: PlayerType = .alphaZero
+    
     var body: some View {
-        ZStack {
-            Color.green
-                .edgesIgnoringSafeArea(.all)
-            
-            VStack {
-                Text("Reversi")
-                    .font(.largeTitle)
-                    .foregroundColor(Color.black)
-                    .padding(20)
-                
-                Spacer()
+        NavigationStack {
+            ZStack {
+                Color.green
+                    .edgesIgnoringSafeArea(.all)
                 
                 VStack {
-                    Button {
-                        print("minimax")
-                    } label: {
-                        Text("Minimax")
-                    }
-                    .controlSize(.large)
-                    .buttonStyle(.borderedProminent)
-
+                    Text("Reversi")
+                        .font(.largeTitle)
+                        .foregroundColor(Color.black)
+                        .padding(20)
                     
-                    Button {
-                        print("AlphaZero")
-                    } label: {
-                        Text("AlphaZero")
+                    Spacer()
+                    VStack {
+                        NavigationLink("Minimax", destination: BoardView().environmentObject(Game(from: GameSettings(player2: .minimax))))
+                            .controlSize(.large)
+                            .buttonStyle(.borderedProminent)
+                        
+                        
+                        NavigationLink("AlphaZero", destination: BoardView().environmentObject(Game(from: GameSettings(player2: .alphaZero))))
+                            .controlSize(.large)
+                            .buttonStyle(.borderedProminent)
+                        
+                        NavigationLink("AlphaZero vs Minimax", destination: BoardView().environmentObject(Game(from: GameSettings(player1: .alphaZero, player2: .minimax))))
+                            .controlSize(.large)
+                            .buttonStyle(.borderedProminent)
                     }
-                    .controlSize(.large)
-                    .buttonStyle(.borderedProminent)
+                    .tint(.black)
+                    
+                    Spacer()
                 }
-                .tint(.black)
-                
-                Spacer()
             }
-            
         }
     }
 }

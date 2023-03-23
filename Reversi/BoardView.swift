@@ -27,6 +27,7 @@ struct BoardView: View {
                         .frame(width: game.settings.squareSize,
                                height: game.settings.squareSize,
                                alignment: .center)
+                    
                 }
                 .alert(item: $game.skipGo) { player in
                     Alert(title: Text("No legal moves"),
@@ -80,6 +81,9 @@ struct BoardView: View {
                         .background(Color.white)
                 }
             }
+        }
+        .onTapGesture {
+            game.click(on: nil)
         }
     }
 }
