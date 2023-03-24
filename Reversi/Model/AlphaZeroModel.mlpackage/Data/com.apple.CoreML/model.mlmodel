@@ -17,27 +17,27 @@
 const#
 fc_bn1_running_var
 
-Ä*(
-name 
-
-"
-fc_bn1_running_var*:
+Ä*:
 val3
 
 Ä*"
-@model_path/weights/weight.bin@ï
+@model_path/weights/weight.bin@*(
+name 
+
+"
+fc_bn1_running_varï
 const$
 fc_bn1_running_mean
 
-Ä*)
-name!
-
-"
-fc_bn1_running_mean*;
+Ä*;
 val4
 
 Ä*#
-@model_path/weights/weight.binÄÖ
+@model_path/weights/weight.binÄ*)
+name!
+
+"
+fc_bn1_running_meanÖ
 const
 fc_bn1_bias
 
@@ -65,15 +65,15 @@
 const#
 fc_bn2_running_var
 
-Ä*(
-name 
-
-"
-fc_bn2_running_var*;
+Ä*;
 val4
 
 Ä*#
-@model_path/weights/weight.bin¿Bï
+@model_path/weights/weight.bin¿B*(
+name 
+
+"
+fc_bn2_running_varï
 const$
 fc_bn2_running_mean
 
@@ -101,56 +101,56 @@
 const
 fc_bn2_weight
 
-Ä*#
-name
-
-"
-fc_bn2_weight*;
+Ä*;
 val4
 
 Ä*#
-@model_path/weights/weight.binÄ\L
+@model_path/weights/weight.binÄ\*#
+name
+
+"
+fc_bn2_weightL
 const
 var_23
-*
-name
-
-	"
-op_23*
+*
 val
 
 
-]
+*
+name
+
+	"
+op_23]
 const
 var_26
 
 
-*
-name
-
-	"
-op_26*
+*
 val
 
 
 
 
-]
+*
+name
+
+	"
+op_26]
 const
 var_28
 
 
-*
-name
-
-	"
-op_28*
+*
 val
 
 
 
 
-j
+*
+name
+
+	"
+op_28j
 const
 input_3_pad_type_0
 *(
@@ -181,16 +181,16 @@
 j
 const
 x_1_to_fp16_dtype_0
-*
+*)
+name!
+
+"
+x_1_to_fp16_dtype_0*
 val
 
 
 "
-fp16*)
-name!
-
-"
-x_1_to_fp16_dtype_0√
+fp16√
 const;
 input_5_weight_0_to_fp16
 
@@ -240,33 +240,33 @@
 
 ô
 conv"
-bias
-
-input_5_bias_0_to_fp16
-x
-	
-cast_30
-pad
-
-input_3_pad_0"
 pad_type
 
-input_3_pad_type_0
-	dilations
-
-
-var_28&
-weight
-
-input_5_weight_0_to_fp16
-groups
-
-
-var_23
+input_3_pad_type_0
 strides
 
 
-var_26/
+var_26&
+weight
+
+input_5_weight_0_to_fp16
+x
+	
+cast_30"
+bias
+
+input_5_bias_0_to_fp16
+	dilations
+
+
+var_28
+pad
+
+input_3_pad_0
+groups
+
+
+var_23/
 input_5_cast
 
 
@@ -300,6 +300,21 @@
 var_53
 
 
+*
+name
+
+	"
+op_53*
+val
+
+
+
+
+]
+const
+var_55
+
+
 *
 val
 
@@ -310,22 +325,7 @@
 name
 
 	"
-op_53]
-const
-var_55
-
-
-*
-name
-
-	"
-op_55*
-val
-
-
-
-
-j
+op_55j
 const
 input_9_pad_type_0
 *(
@@ -361,11 +361,7 @@
 Ä
 Ä
 
-*/
-name'
-
-"
-input_11_weight_0_to_fp16*O
+*O
 valH 
 
 
@@ -373,7 +369,11 @@
 Ä
 
 *$
-@model_path/weights/weight.bin¿µü
+@model_path/weights/weight.bin¿µ*/
+name'
+
+"
+input_11_weight_0_to_fp16ü
 const(
 input_11_bias_0_to_fp16
 
@@ -388,11 +388,24 @@
 
 "
 input_11_bias_0_to_fp16°
-conv
+conv
+x
+
+input_7_cast
+pad
+
+input_9_pad_0#
+bias
+
+input_11_bias_0_to_fp16
 	dilations
 
 
-var_55'
+var_55
+groups
+
+
+var_43'
 weight
 
 input_11_weight_0_to_fp16
@@ -402,20 +415,7 @@
 var_53"
 pad_type
 
-input_9_pad_type_0#
-bias
-
-input_11_bias_0_to_fp16
-pad
-
-input_9_pad_0
-groups
-
-
-var_43
-x
-
-input_7_cast0
+input_9_pad_type_00
 input_11_cast
 
 
@@ -438,32 +438,32 @@
 var_66
 
 
-*
-name
-
-	"
-op_66*
+*
 val
 
 
 
 
-]
+*
+name
+
+	"
+op_66]
 const
 var_68
 
 
-*
-name
-
-	"
-op_68*
+*
 val
 
 
 
 
-l
+*
+name
+
+	"
+op_68l
 const
 input_15_pad_type_0
 *)
@@ -499,11 +499,7 @@
 Ä
 Ä
 
-*,
-name$
-
-"
-out_1_weight_0_to_fp16*P
+*P
 valI 
 
 
@@ -511,22 +507,45 @@
 Ä
 
 *%
-@model_path/weights/weight.bin¿æ°ô
+@model_path/weights/weight.bin¿æ°*,
+name$
+
+"
+out_1_weight_0_to_fp16ô
 const%
 out_1_bias_0_to_fp16
 
 
-Ä**
-name"
-
-"
-out_1_bias_0_to_fp16*=
+Ä*=
 val6
 
 
 Ä*%
-@model_path/weights/weight.binÄø¡õ
-conv
+@model_path/weights/weight.binÄø¡**
+name"
+
+"
+out_1_bias_0_to_fp16õ
+conv
+x
+
+input_13_cast#
+pad_type
+
+input_15_pad_type_0
+pad
+
+input_15_pad_0$
+weight
+
+out_1_weight_0_to_fp16 
+bias
+
+out_1_bias_0_to_fp16
+strides
+
+
+var_66
 	dilations
 
 
@@ -534,26 +553,7 @@
 groups
 
 
-var_43
-x
-
-input_13_cast
-pad
-
-input_15_pad_0
-strides
-
-
-var_66#
-pad_type
-
-input_15_pad_type_0$
-weight
-
-out_1_weight_0_to_fp16 
-bias
-
-out_1_bias_0_to_fp16-
+var_43-
 
 out_1_cast
 
@@ -562,14 +562,14 @@ out_1_cast
 Ä
 
 c
-add
+add
+y
+
+input_7_cast
 x
 
 
-out_1_cast
-y
-
-input_7_cast0
+out_1_cast0
 input_17_cast
 
 
@@ -603,44 +603,44 @@ out_1_cast
 var_90
 
 
-*
-name
-
-	"
-op_90*
+*
 val
 
 
 
 
-]
+*
+name
+
+	"
+op_90]
 const
 var_92
 
 
-*
-name
-
-	"
-op_92*
+*
 val
 
 
 
 
-l
+*
+name
+
+	"
+op_92l
 const
 input_21_pad_type_0
-*
+*)
+name!
+
+"
+input_21_pad_type_0*
 val
 
 
 "
-custom*)
-name!
-
-"
-input_21_pad_type_0p
+customp
 const
 input_21_pad_0
 
@@ -691,26 +691,13 @@ out_1_cast
 
 Ä*%
 @model_path/weights/weight.binÄ»·§
-conv
-pad
-
-input_21_pad_0#
-bias
-
-input_23_bias_0_to_fp16#
-pad_type
-
-input_21_pad_type_0
+conv
 x
 
-input_19_cast'
-weight
-
-input_23_weight_0_to_fp16
-strides
-
-
-var_90
+input_19_cast#
+bias
+
+input_23_bias_0_to_fp16
 	dilations
 
 
@@ -718,7 +705,20 @@ out_1_cast
 groups
 
 
-var_800
+var_80
+pad
+
+input_21_pad_0'
+weight
+
+input_23_weight_0_to_fp16
+strides
+
+
+var_90#
+pad_type
+
+input_21_pad_type_00
 input_23_cast
 
 
@@ -757,46 +757,46 @@ out_1_cast
 var_105
 
 
-*
+*
+name
+
+
+"
+op_105*
 val
 
 
 
 
-*
-name
-
-
-"
-op_105l
+l
 const
 input_27_pad_type_0
-*)
-name!
-
-"
-input_27_pad_type_0*
+*
 val
 
 
 "
-customp
+custom*)
+name!
+
+"
+input_27_pad_type_0p
 const
 input_27_pad_0
 
 
-*!
+*$
+name
+
+"
+input_27_pad_0*!
 val
 
 
 
 
 
-*$
-name
-
-"
-input_27_pad_0ø
+ø
 const8
 out_weight_0_to_fp16 
 
@@ -821,23 +821,32 @@ out_1_cast
 out_bias_0_to_fp16
 
 
-Ä*=
+Ä*(
+name 
+
+"
+out_bias_0_to_fp16*=
 val6
 
 
 Ä*%
-@model_path/weights/weight.binÄ—Å	*(
-name 
-
-"
-out_bias_0_to_fp16ó
-conv
-	dilations
-	
-var_105"
+@model_path/weights/weight.binÄ—Å	ó
+conv#
+pad_type
+
+input_27_pad_type_0"
 weight
 
-out_weight_0_to_fp16
+out_weight_0_to_fp16
+bias
+
+out_bias_0_to_fp16
+pad
+
+input_27_pad_0
+	dilations
+	
+var_105
 groups
 
 
@@ -847,16 +856,7 @@ out_1_cast
 input_25_cast
 strides
 	
-var_103
-pad
-
-input_27_pad_0#
-pad_type
-
-input_27_pad_type_0
-bias
-
-out_bias_0_to_fp16+
+var_103+
 out_cast
 
 
@@ -906,14 +906,14 @@ out_1_cast
 
 "
 op_117W
-reshape
+reshape
+shape
+	
+var_117
 x
 
 
-x_cast
-shape
-	
-var_117%
+x_cast%
 input_31_cast
 
 
@@ -939,26 +939,26 @@ out_1_cast
 fc1_bias_to_fp16
 
 
-Ä*&
-name
-
-"
-fc1_bias_to_fp16*=
+Ä*=
 val6
 
 
 Ä*%
-@model_path/weights/weight.binÄ⁄ÅÜ
+@model_path/weights/weight.binÄ⁄Å*&
+name
+
+"
+fc1_bias_to_fp16Ü
 linear
 bias
 
-fc1_bias_to_fp16
-x
-
-input_31_cast 
+fc1_bias_to_fp16 
 weight
 
-fc1_weight_to_fp16$
+fc1_weight_to_fp16
+x
+
+input_31_cast$
 input_33_cast
 
 
@@ -982,18 +982,18 @@ out_1_cast
 input_35_rank2_expansion_axes_0
 
 
-*5
-name-
-%
-#"!
-input_35_rank2_expansion_axes_0*'
+*'
 val 
 
 
 
 
 
-ˇˇˇˇˇˇˇˇˇé
+ˇˇˇˇˇˇˇˇˇ*5
+name-
+%
+#"!
+input_35_rank2_expansion_axes_0é
 expand_dims
 x
 
@@ -1019,38 +1019,38 @@ out_1_cast
 
 "
 fp32ê
-cast&
-x!
-
-input_35_rank2_expansion_cast:
+cast:
 dtype1
 /
--input_35_rank2_expansion_cast_to_fp32_dtype_0$
+-input_35_rank2_expansion_cast_to_fp32_dtype_0&
+x!
+
+input_35_rank2_expansion_cast$
 cast_15
 
 
 Ä
 Â
 
-batch_norm"
-variance
-
-fc_bn1_running_var
+batch_norm
 beta
 
-fc_bn1_bias
+fc_bn1_bias"
+variance
+
+fc_bn1_running_var
+gamma
+
+fc_bn1_weight
+mean
+
+fc_bn1_running_mean
 x
 	
 cast_15
 epsilon
 	
-var_123
-mean
-
-fc_bn1_running_mean
-gamma
-
-fc_bn1_weight3
+var_1233
 input_35_batch_norm_1d
 
 
@@ -1123,41 +1123,41 @@ batch_norm"
 
 
 Ä
-Ä*D
+Ä*(
+name 
+
+"
+fc2_weight_to_fp16*D
 val=
 
 
 Ä
 Ä*%
-@model_path/weights/weight.bin¿‚Å*(
-name 
-
-"
-fc2_weight_to_fp16ë
+@model_path/weights/weight.bin¿‚Åë
 const!
 fc2_bias_to_fp16
 
 
-Ä*=
+Ä*&
+name
+
+"
+fc2_bias_to_fp16*=
 val6
 
 
 Ä*%
-@model_path/weights/weight.binÄ„ë*&
-name
-
-"
-fc2_bias_to_fp16Ü
-linear
+@model_path/weights/weight.binÄ„ëÜ
+linear
+x
+
+input_37_cast
 bias
 
 fc2_bias_to_fp16 
 weight
 
-fc2_weight_to_fp16
-x
-
-input_37_cast$
+fc2_weight_to_fp16$
 input_41_cast
 
 
@@ -1165,41 +1165,41 @@ batch_norm"
 ÄQ
 const
 var_139
-*
-name
-
-
-"
-op_139*
+*
 val
 
 
 
 
-¨≈'7ò
+¨≈'7*
+name
+
+
+"
+op_139ò
 const/
 input_43_rank2_expansion_axes_0
 
 
-*5
-name-
-%
-#"!
-input_43_rank2_expansion_axes_0*'
+*'
 val 
 
 
 
 
 
-ˇˇˇˇˇˇˇˇˇé
-expand_dims+
-axes#
-!
-input_43_rank2_expansion_axes_0
+ˇˇˇˇˇˇˇˇˇ*5
+name-
+%
+#"!
+input_43_rank2_expansion_axes_0é
+expand_dims
 x
 
-input_41_cast:
+input_41_cast+
+axes#
+!
+input_43_rank2_expansion_axes_0:
 input_43_rank2_expansion_cast
 
 
@@ -1208,16 +1208,16 @@ batch_norm"
 û
 const5
 -input_43_rank2_expansion_cast_to_fp32_dtype_0
-*
+*C
+name;
+3
+1"/
+-input_43_rank2_expansion_cast_to_fp32_dtype_0*
 val
 
 
 "
-fp32*C
-name;
-3
-1"/
--input_43_rank2_expansion_cast_to_fp32_dtype_0ê
+fp32ê
 cast&
 x!
 
@@ -1231,25 +1231,25 @@ batch_norm"
 Ä
 Â
 
-batch_norm
-beta
-
-fc_bn2_bias
-gamma
-
-fc_bn2_weight
-epsilon
-	
-var_139
-x
-	
-cast_10
+batch_norm
 mean
 
-fc_bn2_running_mean"
+fc_bn2_running_mean
+beta
+
+fc_bn2_bias
+x
+	
+cast_10
+gamma
+
+fc_bn2_weight"
 variance
 
-fc_bn2_running_var3
+fc_bn2_running_var
+epsilon
+	
+var_1393
 input_43_batch_norm_1d
 
 
@@ -1283,27 +1283,27 @@ batch_norm
 ,
 *"(
 &input_43_batch_norm_1d_to_fp16_dtype_0Å
-cast3
-dtype*
-(
-&input_43_batch_norm_1d_to_fp16_dtype_0
+cast
 x
 
-input_43_batch_norm_1d#
+input_43_batch_norm_1d3
+dtype*
+(
+&input_43_batch_norm_1d_to_fp16_dtype_0#
 cast_9
 
 
 
 Ä
 ]
-squeeze
-axes
-
-input_43_axes_0
+squeeze
 x
 
 
-cast_9$
+cast_9
+axes
+
+input_43_axes_0$
 input_43_cast
 
 
@@ -1323,43 +1323,43 @@ batch_norm
 
 
 A
-Ä*C
+Ä*.
+name&
+
+"
+policy_fc_weight_to_fp16*C
 val<
 
 
 A
 Ä*%
-@model_path/weights/weight.bin¿Áë*.
-name&
-
-"
-policy_fc_weight_to_fp16õ
+@model_path/weights/weight.bin¿Áëõ
 const&
 policy_fc_bias_to_fp16
 
 
 
-A*<
+A*,
+name$
+
+"
+policy_fc_bias_to_fp16*<
 val5
 
 
 
 A*%
-@model_path/weights/weight.binÄÏì*,
-name$
-
-"
-policy_fc_bias_to_fp16é
-linear&
+@model_path/weights/weight.binÄÏìé
+linear
+x
+
+input_45_cast&
 weight
 
 policy_fc_weight_to_fp16"
 bias
 
-policy_fc_bias_to_fp16
-x
-
-input_45_cast 
+policy_fc_bias_to_fp16 
 
 input_cast
 
@@ -1371,44 +1371,44 @@ input_cast
 
 
 
-Ä*C
+Ä*-
+name%
+
+"
+value_fc_weight_to_fp16*C
 val<
 
 
 
 Ä*%
-@model_path/weights/weight.binÄÓì*-
-name%
-
-"
-value_fc_weight_to_fp16|
+@model_path/weights/weight.binÄÓì|
 const%
 value_fc_bias_to_fp16
 
 
 
-*
+*+
+name#
+
+"
+value_fc_bias_to_fp16*
 val
 
 
 
 
 :
-¨*+
-name#
-
-"
-value_fc_bias_to_fp16å
-linear
-x
-
-input_45_cast!
+¨å
+linear!
 bias
 
 value_fc_bias_to_fp16%
 weight
 
-value_fc_weight_to_fp16 
+value_fc_weight_to_fp16
+x
+
+input_45_cast 
 
 value_cast
 
@@ -1428,13 +1428,13 @@ value_cast
 "
 op_157_
 softmax
+axis
+	
+var_157
 x
 
 
-input_cast
-axis
-	
-var_157*
+input_cast*
 var_159_softmax_cast
 
 
@@ -1443,23 +1443,23 @@ input_cast
 const!
 var_159_epsilon_0_to_fp16
 
-*
+*.
+name&
+
+"
+op_159_epsilon_0_to_fp16*
 val
 
 
 :
-  *.
-name&
-
-"
-op_159_epsilon_0_to_fp16r
-log(
-epsilon
-
-var_159_epsilon_0_to_fp16
+  r
+log
 x
 
-var_159_softmax_cast"
+var_159_softmax_cast(
+epsilon
+
+var_159_epsilon_0_to_fp16"
 var_159_cast
 
 
@@ -1489,16 +1489,16 @@ value_cast"
 {
 const$
 var_160_cast_to_fp32_dtype_0
-*1
-name)
-!
-"
-op_160_cast_to_fp32_dtype_0*
+*
 val
 
 
 "
-fp32g
+fp32*1
+name)
+!
+"
+op_160_cast_to_fp32_dtype_0g
 cast
 x
 

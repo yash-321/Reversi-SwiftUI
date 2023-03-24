@@ -38,7 +38,7 @@ class AlphaZero: MoveChooser{
 //
         let maxIndex = maskedPolicy.firstIndex(of: maskedPolicy.max()!)
         let bestMove = Move(x: Int(maxIndex!/settings.rows), y: maxIndex!%settings.rows)
-//       print(value)
+
         print(bestMove)
 
         return bestMove

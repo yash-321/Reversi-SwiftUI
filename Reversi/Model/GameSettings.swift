@@ -14,9 +14,9 @@ class GameSettings: ObservableObject {
     @Published var columns = 8
     @Published var actionSize = 65
     
-    @Published var searchDepth = 4
+    @Published var searchDepth = 3
     
-    @Published var mctsSims = 25
+    @Published var mctsSims = 100
     
     @Published var player1: MoveChooser?
     @Published var player2: MoveChooser
@@ -33,6 +33,9 @@ class GameSettings: ObservableObject {
         case .minimax:
             self.player1 = Minimax()
             
+        case .random:
+            self.player1 = Random()
+            
         default:
             self.player1 = nil
         }
@@ -42,6 +45,9 @@ class GameSettings: ObservableObject {
             
         case .minimax:
             self.player2 = Minimax()
+            
+        case .random:
+            self.player2 = Random()
             
         default:
             self.player2 = AlphaZero()

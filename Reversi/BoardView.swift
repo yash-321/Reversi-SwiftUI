@@ -52,14 +52,14 @@ struct BoardView: View {
                     }
                 }
                 .alert(item: $game.gameWinner) { winner in
-                    Alert(title: Text("\(winner) wins"),
+                    Alert(title: Text("\(winner)"),
                           message: Text(game.resultString),
                           dismissButton: .default(Text("Play Again")){
                         game.resetBoard()
                         withAnimation {
-                            if winner == "Black" {
+                            if winner == "Black wins" {
                                 game.blackWins += 1
-                            } else if winner == "White" {
+                            } else if winner == "White wins" {
                                 game.whiteWins += 1
                             }
                         }

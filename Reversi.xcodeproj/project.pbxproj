@@ -11,7 +11,6 @@
 		863FE36228FEE605004ADA97 /* BoardState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863FE36128FEE605004ADA97 /* BoardState.swift */; };
 		864730B129C0EBF000CE9CEA /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864730B029C0EBF000CE9CEA /* MenuView.swift */; };
 		864730B529C262CC00CE9CEA /* PlayerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864730B429C262CC00CE9CEA /* PlayerType.swift */; };
-		864730BB29C40DE000CE9CEA /* AlphaZeroModel.mlpackage in Sources */ = {isa = PBXBuildFile; fileRef = 864730BA29C40DDF00CE9CEA /* AlphaZeroModel.mlpackage */; };
 		869E356A28F851E600BFC6F7 /* Move.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869E356928F851E600BFC6F7 /* Move.swift */; };
 		86A4CEF228F73E8800D9785B /* ReversiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A4CEF128F73E8800D9785B /* ReversiApp.swift */; };
 		86A4CEF628F73E8D00D9785B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86A4CEF528F73E8D00D9785B /* Assets.xcassets */; };
@@ -22,6 +21,8 @@
 		86A4CF0928F7546F00D9785B /* Piece.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A4CF0828F7546F00D9785B /* Piece.swift */; };
 		86A4CF0B28F7570100D9785B /* CellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A4CF0A28F7570100D9785B /* CellView.swift */; };
 		86A4CF0E28F7672900D9785B /* BoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A4CF0D28F7672900D9785B /* BoardView.swift */; };
+		86B570F729CC099D00DDE077 /* AlphaZeroModel.mlpackage in Sources */ = {isa = PBXBuildFile; fileRef = 86B570F629CC099D00DDE077 /* AlphaZeroModel.mlpackage */; };
+		86B570F929CC122600DDE077 /* Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B570F829CC122600DDE077 /* Random.swift */; };
 		86F7DC0F29A7DEEB001B764D /* MCTS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F7DC0E29A7DEEA001B764D /* MCTS.swift */; };
 		86F7DC1129A7E06C001B764D /* Minimax.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F7DC1029A7E06C001B764D /* Minimax.swift */; };
 		86F7DC1329A7E439001B764D /* AlphaZero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F7DC1229A7E439001B764D /* AlphaZero.swift */; };
@@ -32,7 +33,6 @@
 		863FE36128FEE605004ADA97 /* BoardState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardState.swift; sourceTree = "<group>"; };
 		864730B029C0EBF000CE9CEA /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		864730B429C262CC00CE9CEA /* PlayerType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerType.swift; sourceTree = "<group>"; };
-		864730BA29C40DDF00CE9CEA /* AlphaZeroModel.mlpackage */ = {isa = PBXFileReference; lastKnownFileType = folder.mlpackage; path = AlphaZeroModel.mlpackage; sourceTree = "<group>"; };
 		869E356928F851E600BFC6F7 /* Move.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Move.swift; sourceTree = "<group>"; };
 		86A4CEEE28F73E8800D9785B /* Reversi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reversi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		86A4CEF128F73E8800D9785B /* ReversiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReversiApp.swift; sourceTree = "<group>"; };
@@ -44,6 +44,8 @@
 		86A4CF0828F7546F00D9785B /* Piece.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Piece.swift; sourceTree = "<group>"; };
 		86A4CF0A28F7570100D9785B /* CellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellView.swift; sourceTree = "<group>"; };
 		86A4CF0D28F7672900D9785B /* BoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardView.swift; sourceTree = "<group>"; };
+		86B570F629CC099D00DDE077 /* AlphaZeroModel.mlpackage */ = {isa = PBXFileReference; lastKnownFileType = folder.mlpackage; path = AlphaZeroModel.mlpackage; sourceTree = "<group>"; };
+		86B570F829CC122600DDE077 /* Random.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Random.swift; sourceTree = "<group>"; };
 		86F7DC0E29A7DEEA001B764D /* MCTS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCTS.swift; sourceTree = "<group>"; };
 		86F7DC1029A7E06C001B764D /* Minimax.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Minimax.swift; sourceTree = "<group>"; };
 		86F7DC1229A7E439001B764D /* AlphaZero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphaZero.swift; sourceTree = "<group>"; };
@@ -101,7 +103,7 @@
 		86A4CEFF28F73F0D00D9785B /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				864730BA29C40DDF00CE9CEA /* AlphaZeroModel.mlpackage */,
+				86B570F629CC099D00DDE077 /* AlphaZeroModel.mlpackage */,
 				86A4CF0028F73F6600D9785B /* GameSettings.swift */,
 				86A4CF0228F7474E00D9785B /* Game.swift */,
 				86A4CF0428F7486300D9785B /* Cell.swift */,
@@ -111,6 +113,7 @@
 				863FE35D28FEE183004ADA97 /* MoveChooser.swift */,
 				864730B429C262CC00CE9CEA /* PlayerType.swift */,
 				863FE36128FEE605004ADA97 /* BoardState.swift */,
+				86B570F829CC122600DDE077 /* Random.swift */,
 				86F7DC1029A7E06C001B764D /* Minimax.swift */,
 				86F7DC1229A7E439001B764D /* AlphaZero.swift */,
 				86F7DC0E29A7DEEA001B764D /* MCTS.swift */,
@@ -190,7 +193,8 @@
 			files = (
 				869E356A28F851E600BFC6F7 /* Move.swift in Sources */,
 				86F7DC0F29A7DEEB001B764D /* MCTS.swift in Sources */,
-				864730BB29C40DE000CE9CEA /* AlphaZeroModel.mlpackage in Sources */,
+				86B570F729CC099D00DDE077 /* AlphaZeroModel.mlpackage in Sources */,
+				86B570F929CC122600DDE077 /* Random.swift in Sources */,
 				86A4CF0928F7546F00D9785B /* Piece.swift in Sources */,
 				86A4CEF228F73E8800D9785B /* ReversiApp.swift in Sources */,
 				863FE35E28FEE183004ADA97 /* MoveChooser.swift in Sources */,

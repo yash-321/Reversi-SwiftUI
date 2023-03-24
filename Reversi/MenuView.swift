@@ -24,16 +24,23 @@ struct MenuView: View {
                     
                     Spacer()
                     VStack {
-                        NavigationLink("Minimax", destination: BoardView().environmentObject(Game(from: GameSettings(player2: .minimax))))
+                        NavigationLink("Random", destination: BoardView().environmentObject(Game(from: GameSettings(player2: .random))))
                             .controlSize(.large)
                             .buttonStyle(.borderedProminent)
                         
+                        NavigationLink("Minimax", destination: BoardView().environmentObject(Game(from: GameSettings(player2: .minimax))))
+                            .controlSize(.large)
+                            .buttonStyle(.borderedProminent)
                         
                         NavigationLink("AlphaZero", destination: BoardView().environmentObject(Game(from: GameSettings(player2: .alphaZero))))
                             .controlSize(.large)
                             .buttonStyle(.borderedProminent)
                         
                         NavigationLink("AlphaZero vs Minimax", destination: BoardView().environmentObject(Game(from: GameSettings(player1: .alphaZero, player2: .minimax))))
+                            .controlSize(.large)
+                            .buttonStyle(.borderedProminent)
+                        
+                        NavigationLink("AlphaZero vs Random", destination: BoardView().environmentObject(Game(from: GameSettings(player1: .alphaZero, player2: .random))))
                             .controlSize(.large)
                             .buttonStyle(.borderedProminent)
                     }

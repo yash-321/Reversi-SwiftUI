@@ -112,10 +112,10 @@ class Game: ObservableObject {
         let result = boardState.result()
         if result[.Black]! > result[.White]! {
             resultString = "\nBlack: " + String(result[.Black]!) + "\n\nWhite: " + String(result[.White]!)
-            gameWinner = "Black"
+            gameWinner = "Black wins"
         } else if result[.Black]! < result[.White]! {
             resultString = "\nBlack: " + String(result[.Black]!) + "\n\nWhite: " + String(result[.White]!)
-            gameWinner = "White"
+            gameWinner = "White wins"
         } else {
             resultString = "\nBlack: " + String(result[.Black]!) + "\n\nWhite: " + String(result[.White]!)
             gameWinner = "Draw"
